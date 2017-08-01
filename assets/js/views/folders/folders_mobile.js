@@ -22,7 +22,14 @@ $trash.on('click', function(){
 		}
 	}else{
     	$("#delete_"+fldr_id).submit();
-        /*var dataObj = {folder_id:fldr_id};
+        var dataObj = {folder_id:fldr_id};
+
+        $.mobile.loading( "show", {
+            text: "Deleting Folder '"+ fldr_name + "'",
+            textVisible: true,
+            theme: "z",
+            html: ""
+        });
 
         $.ajax({
             type: "POST"
@@ -32,7 +39,7 @@ $trash.on('click', function(){
             ,success: function(){
                 window.location.href="./"
             }
-        });*/
+        });
 	}
 });
 /************************** PRIVATE FUNCTIONS *************************/

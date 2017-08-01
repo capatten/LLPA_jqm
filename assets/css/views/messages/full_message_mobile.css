@@ -139,3 +139,7 @@ div.ui-popup-container div#confirm div.textarea-container textarea {
 div.ui-popup-container div#confirm div.buttons-container a.cancel-btn {
 	text-decoration: none;
 }
+
+.ui-loading .ui-loader {
+    background-color: rgb(240,237,226);
+}
