@@ -1,0 +1,409 @@
+
+html{
+    min-height:100%;/* make sure it is at least as tall as the viewport */
+    position:relative;
+}
+
+body{
+    height:100%; /* force the BODY element to match the height of the HTML element */
+    font-family: 'Roboto', sans-serif;
+}
+
+/*********************** MENU(GLOBAL) ***********************/
+div.menu-wrapper {
+	width: 100%;
+	background-color: #E3E3E3;
+	height: 100px;
+	-webkit-box-shadow: 0px 1px 15px 0px rgba(3,87,140,0.75);
+	-moz-box-shadow: 0px 1px 15px 0px rgba(3,87,140,0.75);
+	box-shadow: 0px 1px 15px 0px rgba(3,87,140,0.75);
+	position: fixed;
+	top: 0;
+	border-bottom: 1px solid #9e9e9e;
+	line-height: 100px;
+	z-index: 1000;
+}
+
+div.menu-wrapper div.menu-container {
+	font-size: 4em;
+	height: 100px;
+}
+
+div.menu-wrapper div.menu-container div.left-content {
+	text-align: left;
+}
+
+div.menu-wrapper div.menu-container a:link,
+div.menu-wrapper div.menu-container a:visited {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+div.menu-wrapper div.menu-container div.left-content span.glyphicon-arrow-left {
+	height: 100px;
+	min-height: 100px;
+	max-height: 100px;
+    line-height: 100px;
+}
+
+div.menu-wrapper div.menu-container div.center-content {
+	text-align: center;
+	color: rgb(3,87,140);
+}
+
+div.menu-wrapper div.menu-container div.center-content span.activePage {
+	display: inline-block;
+	height: 100px;
+	min-height: 100px;
+	max-height: 100px;
+    line-height: 100px;
+    margin-left: 15px;
+}
+
+div.menu-wrapper div.menu-container div.right-content {
+	text-align: right;
+}
+
+div.menu-wrapper div.menu-container div.right-content span.glyphicon  {
+	height: 100px;
+	min-height: 100px;
+	max-height: 100px;
+    line-height: 100px;
+}
+
+div.menu-wrapper div.menu-container div.right-content span.glyphicon-option-vertical,
+div.menu-wrapper div.menu-container div.right-content span.glyphicon-search {
+	margin-left: 30px;
+}
+
+div.menu-wrapper div.menu-container div.right-content div.right-icons ul.dropdown-menu-right {
+	font-size: 1em;
+	position: absolute;
+    right: -15px;
+}
+
+/*********************** MESSAGES/MESSAGES ***********************/
+div.messages-wrapper {
+	padding: 15px 15px 115px;
+	font-size: 1em;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    color: rgb(3,87,140);
+}
+
+div.messages-wrapper div.headerDate h2 {
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid #F19355;
+	line-height: 0.1em;
+	margin: 10px 0 20px; 
+}
+
+div.messages-wrapper div.headerDate h2 span {
+	 background: #FFFFFF;
+	 padding: 0 10px; 
+	 color: #F19355;
+}
+
+div.messages-wrapper  div.message-row {
+	height: 216px;
+	border-bottom: 1px solid #C1C1C1;
+	padding: 15px;
+}
+
+div.messages-wrapper  div.message-row:nth-child(even) {
+	background-color: #E7E7E7;
+}
+
+div.messages-wrapper  div.message-row div.msg-sndr-img {
+	text-align: center;
+    height: 100%;
+}
+
+div.messages-wrapper  div.message-row div.msg-sndr-img span.helper {
+	display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+div.messages-wrapper  div.message-row div.msg-sndr-img img.profile-img {
+    width: auto;
+    border-radius: 50%;
+    vertical-align: middle;
+    max-height: 70%;
+}
+
+div.messages-wrapper  div.message-row div.msg-content-wrapper div.msg-header {
+	clear: both;
+}
+
+div.messages-wrapper  div.message-row div.msg-content-wrapper div.msg-header span.created_by {
+	font-size: 2.5em;
+	float: left;
+	font-weight: bold;
+}
+
+div.messages-wrapper  div.message-row div.msg-content-wrapper div.msg-header span.created_on {
+	font-size: 1.5em;
+	margin-right: 15px;
+	float: right;
+	font-style: italic;
+	line-height: 50px;
+}
+
+div.messages-wrapper  div.message-row div.msg-content-wrapper div.msg-content {
+	font-size: 1.75em;
+}
+
+div.messages-wrapper  div.message-row div.msg-content-wrapper div.msg-attachment {
+	height: 70px;
+}
+
+div.messages-wrapper  div.message-row div.msg-content-wrapper div.msg-attachment span.glyphicon {
+    float: right;
+    font-size: 3em;
+    line-height: 70px;
+    margin-right: 20px;
+}
+
+/*********************** MESSAGES/ADD_NEW_MESSAGE ***********************/
+div.newMessage-wrapper {
+	width: 100%;
+	background-color:rgb(3,87,140);
+	height: 100px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	-webkit-box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.75);
+	position: fixed;
+	bottom: 0;
+	border-top: 1px solid #9e9e9e;
+	z-index: 1000;
+}
+
+div.newMessage-wrapper div.newMessage-container a:link,
+div.newMessage-wrapper div.newMessage-container a:visited {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+div.newMessage-wrapper div.newMessage-container div.newMessage_txtarea-container div.newMessage_btn {
+	padding: 15px;
+    font-size: 45px;
+    text-align: center;
+}
+
+/*********************** ADD_NEW_MESSAGE/CREATE_NEW_MESSAGE ***********************/
+div.createNewMessage-wrapper {
+	padding-top: 115px;
+	font-size: 60px;
+}
+
+div.createNewMessage-wrapper div.createNewMessage-container div.messageText-container {
+	border: 1px solid #000000;
+}
+
+div.createNewMessage-wrapper div.createNewMessage-container div.messageText-container div.profile-img-container {
+	padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+div.createNewMessage-wrapper div.createNewMessage-container div.messageText-container div.profile-img-container img.profile-img {
+	border-radius: 50%;
+	height: 200px;
+	width: auto;
+}
+
+div.createNewMessage-wrapper div.createNewMessage-container div.messageText-container textarea.createNewMessage_txtarea {
+	width: 100%;
+    resize: none;
+    height: 400px;
+    padding: 15px;
+    border: 1px solid #000000;
+    font-size: 45px;
+}
+
+div.createNewMessage-wrapper div.createNewMessage-container  div.newMessageFooter {
+	background-color: #C1C1C1;
+	padding: 10px 0px;
+	height: 100px;
+}
+
+div.createNewMessage-wrapper div.createNewMessage-container  div.newMessageFooter div.add-department_btn {
+	display: inline-block;
+	line-height: 60px;
+}
+
+div.createNewMessage-wrapper div.createNewMessage-container  div.newMessageFooter span.glyphicon {
+	line-height: 60px;
+	margin-top: 10px;
+}
+
+div.createNewMessage-wrapper div.createNewMessage-container div.messageBtn-container {
+	padding-top: 15px;
+	paddin-bottom: 15px;
+}
+
+div.createNewMessage-wrapper div.createNewMessage-container div.messageBtn-container button {
+	font-size: 60px;
+}
+
+/*********************** FOLDERS/FOLDER-LIST ***********************/
+div.folder-list-wrapper {
+	padding-top: 100px;
+	font-size: 60px;
+}
+
+div.folder-list-wrapper div.folder-row {
+	border-top: 1px solid #C1C1C1;
+	border-bottom: 1px solid #C1C1C1;
+	height: 150px;
+    padding: 0px 15px;
+    display: flex;
+  	align-items: center;
+	justify-content: space-between;
+}
+
+div.folder-list-wrapper div.folder-row div.folder-container {
+	display: flex;
+    align-items: center;
+    float: right;
+    justify-content: space-between;
+    line-height: 150px;
+}
+
+div.folder-list-wrapper div.folder-row div.folder-container span.glyicon-trash {
+	line-height: 150px;
+	color: red;
+}
+
+/*********************** PROFILE/PROFILE ***********************/
+div.profile-wrapper {
+	text-align: center;
+   	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #116A96;
+    z-index: -1;
+    margin-top: 100px;
+}
+
+div.profile-wrapper div.profile-title  h1 {
+	font-size: 4em;
+}
+
+div.profile-wrapper div.container-fluid {
+	position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: 1em 1em 0.8em 0em;
+}
+
+div.profile-wrapper div.container-fluid div.profile-details-wrapper {
+	position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 15px;
+}
+
+div.profile-wrapper div.container-fluid div.profile-details-wrapper div.col-xs-12 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+div.profile-wrapper div.container-fluid div.profile-details-wrapper div.col-xs-12 div.profile-details {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 350px;
+}
+
+div.profile-wrapper div.container-fluid div.profile-details-wrapper div.col-xs-12 div.profile-details div.row {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 115px;
+    left: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+div.profile-wrapper div.container-fluid div.profile-details-wrapper div.col-xs-12 div.profile-details div.row div.profile-data {
+	position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #FFFFFF;
+    border: 2px solid #f19355;
+}
+
+div.profile-wrapper div.container-fluid div.profile-details-wrapper div.col-xs-12 div.profile-details div.row div.profile-data img {
+    width: 30em;
+    height: 30em;
+    position: relative;
+    top: -15em;
+    border-radius: 50%;
+}
+
+div.profile-wrapper div.container-fluid div.profile-details-wrapper div.col-xs-12 div.profile-details div.row div.profile-data div.profile-row {
+	border: 1px solid #000;
+    position: absolute;
+    top: 20em;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+}
+
+div.profile-wrapper div.container-fluid div.profile-details-wrapper div.col-xs-12 div.profile-details div.row div.profile-data div.profile-row div.row {
+	position: initial;
+}
+
+div.profile-wrapper div.container-fluid div.profile-details-wrapper div.col-xs-12 div.profile-details div.row div.profile-data div.profile-row div.row div.col-xs-12 {
+	position: initial;
+}
+
+div.profile-wrapper div.container-fluid div.profile-details-wrapper div.col-xs-12 div.profile-details div.row div.profile-data div.profile-row div.row div.col-xs-12 h2 input {
+	border: none;
+    padding-left: 10px;
+}
+
+div.profile-wrapper div.container-fluid div.profile-details-wrapper div.col-xs-12 div.profile-details div.row div.profile-data div.profile-row div.row h2 {
+	font-size: 3.5em;
+}
+
+div.profile-wrapper div.container-fluid div.profile-details-wrapper div.col-xs-12 div.profile-details div.row div.profile-data div.profile-row div.row div.dept-logo hr {
+	margin-top: 10em;
+    margin-bottom: 10em;
+    border: 0;
+    border-top: 6px solid #eee;
+}
+
+div.profile-wrapper div.container-fluid div.profile-details-wrapper div.col-xs-12 div.profile-details div.row div.profile-data div.profile-row div.row div.dept-logo {
+	height: 20em;
+}
+
+div.profile-wrapper div.container-fluid div.profile-details-wrapper div.col-xs-12 div.profile-details div.row div.profile-data div.profile-row div.row div.dept-logo img {
+	background-color: #FFFFFF;
+    width: 15em;
+    height: 15em;
+    position: relative;
+    top: -18em;
+}

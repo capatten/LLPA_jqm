@@ -1,0 +1,73 @@
+div.messages-wrapper div.messages-content {
+	position: relative;
+    bottom: 2em;
+    width: 100%;
+    top: 0.5em;
+}
+
+div.messages-wrapper div.messages-content div.headerDate h2 {
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid #F19355;
+	line-height: 0.1em;
+	margin: 5px 0 20px;
+	font-size: 0.75em;
+}
+
+div.messages-wrapper div.messages-content div.headerDate h2 span {
+	 background: #F9F9F9;
+	 padding: 0 10px;
+	 color: #F19355;
+}
+
+div.messages-wrapper div.messages-content div.message-row {
+	width: 100%;
+	height: 5.25em;
+   	margin-top: 5px;
+	color: rgb(3,87,140);
+}
+
+div.messages-wrapper div.messages-content div.message-row:nth-child(even) {
+	background-color: #E7E7E7;
+}
+
+div.messages-wrapper div.messages-content div.message-row div.message-row-content {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+div.messages-wrapper div.messages-content div.message-row div.msg-sndr-img {
+	width: 20%;
+	display: inline-block;
+    height: 5.25em;
+   	line-height: 5.10em;
+	text-align: center;
+}
+
+div.messages-wrapper div.messages-content div.message-row div.msg-sndr-img img {
+	width: 4.125em;
+	height: 4.125em;
+	vertical-align: middle;
+	border-radius: 50%
+}
+
+div.messages-wrapper div.messages-content div.message-row div.msg-content-wrapper {
+	float: right;
+	width: 80%;
+	display: inline-block
+}
+
+div.messages-wrapper div.messages-content div.message-row div.msg-content-wrapper div.msg-content {
+	padding-left: 15px;
+}
+
+div.messages-wrapper div.messages-content div.message-row div.msg-content-wrapper div.msg-content div.msg-header {
+	font-weight: bold;
+}
+
+div.messages-wrapper div.messages-content div.message-row div.msg-content-wrapper div.msg-content div.msg-header span.created_on {
+	font-weight: normal;
+	font-style: italic;
+	float: right;
+	font-size: .75em;
+}

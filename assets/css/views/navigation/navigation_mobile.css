@@ -1,0 +1,58 @@
+div.navigation-wrapper {
+	padding-left: 1em;
+	padding-right: 1em;
+	background-color:rgb(3,87,140);
+	position: absolute;
+	bottom: -9px;
+	left: 0;
+	right: 0;
+}
+
+div.navigation-wrapper div.navigation-container {
+	height: 3em;
+	text-align: center;
+   	width: 100%;
+}
+
+div.navigation-wrapper div.navigation-container div.navigation-item {
+	display: inline-block;
+	width: 20%;
+	float: left;
+	color: rgb(240,237,226);
+}
+
+div.navigation-wrapper div.navigation-container div.navigation-item div.home-btn {
+	width: 60px;
+	box-sizing: border-box;
+	border: 2px solid #fff;
+	position: relative;
+	top: -11px;
+	border-radius: 50%;
+	height: 60px;
+	background-color: rgb(41,115,164);
+	padding-left: 3px;
+	padding-top: 3px;
+	margin: 0 auto;
+}
+
+div.navigation-wrapper div.navigation-container div.navigation-item div.pending-count {
+	width: 20px; 
+	height: 20px; 
+	z-index: 2; 
+	position: absolute; 
+	background-color: rgb(119,157,194);
+	border-radius: 50%; 
+	right: -9px; 
+	top: -26px; 
+	font-size: 10px; 
+	line-height: 22px; 
+	text-shadow: initial; 
+	text-align: center; 
+	color: rgb(240,237,226);
+}
+
+div.navigation-wrapper div.navigation-container div.navigation-item img.nav-icon {
+   	width: auto;
+    height: 2.1875em;
+    padding-top: 0.375em;
+}

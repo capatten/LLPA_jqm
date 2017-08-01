@@ -1,0 +1,45 @@
+div.folders-wrapper {
+	position: absolute;
+	width: 100%;
+}
+
+div.folders-wrapper div.new-folder {
+	padding-top: 0.625em;
+	padding-bottom: 0.625em;
+}
+
+div.folders-wrapper div.new-folder button {
+	width: 50%;
+	margin: 0 auto;
+}
+
+div.folders-wrapper div.folder-container {
+	border-bottom: 0.0625em solid #000000;
+}
+
+div.folders-wrapper div.folder-container h2 {
+	margin-left: 1em;
+}
+
+div.folders-wrapper div.folder-container h2 span.message-count {
+	position: relative;
+	right: 0;
+	top: -1px;
+	font-size: 0.75em;
+}
+
+div.folders-wrapper div.folder-container h2 i.fa-trash-o {
+	position: absolute;
+	right: 1em;
+	margin-top: 4px;
+	color: #ff0000;
+}
+
+div.ui-popup-container {
+	width: 100%;
+}
+
+div.ui-popup-container div#add-new,
+div.ui-popup-container div#delete-folder{
+	padding: 0.3125em 0.625em;
+}
