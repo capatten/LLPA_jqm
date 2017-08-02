@@ -156,7 +156,17 @@ class Messages_model extends CI_Model {
 		return $result;
 	}
 
-    /****************************** PENDING MESSAGE COUNT ******************************/
+    /****************************** UPDATE MESSAGE STATUS ******************************/
+	public function update_message_status( $param_message_id, $param_message_status ){
+        $data = array(
+            'message_status' => $param_message_status
+        );
+
+        $this->db->where('message_id', $param_message_id);
+        $this->db->update('messages', $data);
+    }
+
+    /****************************** GET ALL DEPARTMENTS ******************************/
     public function get_all_departments(){
         $query = $this->db->query("
 			SELECT

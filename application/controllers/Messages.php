@@ -148,6 +148,11 @@ class Messages extends CI_Controller {
 		$this->load->view('layout/default_mobile',$data);
 	}
 
+    public function Approve_Message(){
+        $this->load->model('Messages_Model');
+        $this->Messages_Model->update_message_status( $param_message_id = $_POST["message_id"], $param_message_status = "1" );
+    }
+
 	/**************************************************************** PRIVATE FUNCTIONS ****************************************************************/
 	private function _getUserSessionVariables($userEmailAddress){
 		$this->load->model('Users_Model');

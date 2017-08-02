@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" href="<?php echo base_url("assets/css/views/messages/full_message_mobile.css"); ?>" />
 
-<div id="full-message" class="full-message-wrapper">
+<div id="full-message" class="full-message-wrapper" data-message-id="<?php echo $content['message_id']; ?>">
 	<div class="full-message-content">
 		<div class="message-header">
 			<div class="profile-img-wrapper">

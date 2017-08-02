@@ -47,7 +47,6 @@ class Folders extends CI_Controller {
     public function Delete_Folder(){
         $this->load->model('Folders_Model');
         $this->Folders_Model->delete_user_folders( $param_folder_id = $_POST["folder_id"] );
-        redirect(base_url() . '/Folders/', 'auto', 301);
     }
 
 	/**************************************************************** PRIVATE FUNCTIONS ****************************************************************/

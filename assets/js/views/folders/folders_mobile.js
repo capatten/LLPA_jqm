@@ -37,7 +37,7 @@ $trash.on('click', function(){
             ,data: ({"folder_id": fldr_id})
             ,cache: false
             ,success: function(){
-                window.location.href="./"
+                window.location.href="./Pending_Messages"
             }
         });
 	}

@@ -13,6 +13,8 @@ class Profile_model extends CI_Model {
 			CALL get_emp_details('$param_emp_id')
 		");
 		$result = $query->result_array();
+        $query->next_result();
+        $query->free_result();
 		return $result;
 	}
 }
