@@ -43,6 +43,15 @@ class Folders extends CI_Controller {
 		$this->load->view('layout/default_mobile',$data);
 	}
 
+    /************************************************ ADD FOLDER ************************************************/
+    public function Add_Folder(){
+        $this->load->model('Folders_Model');
+        $this->Folders_Model->add_new_folder(
+            $param_folder_name = $_POST["folder_name"]
+            ,$param_emp_id = $_SESSION["emp_id"]
+        );
+    }
+
     /************************************************ DELETE FOLDER ************************************************/
     public function Delete_Folder(){
         $this->load->model('Folders_Model');

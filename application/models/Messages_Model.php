@@ -157,13 +157,23 @@ class Messages_model extends CI_Model {
 	}
 
     /****************************** UPDATE MESSAGE STATUS ******************************/
-	public function update_message_status( $param_message_id, $param_message_status ){
+    public function update_message_status( $param_message_id, $param_message_status ){
         $data = array(
             'message_status' => $param_message_status
         );
 
         $this->db->where('message_id', $param_message_id);
         $this->db->update('messages', $data);
+    }
+
+    /****************************** INSERT DECLINE EXPLANATION ******************************/
+    public function insert_decline_explanation( $param_message_id, $param_decline_explanation ){
+        $data = array(
+            'message_id' => $param_message_id
+            ,'decline_explanation' => $param_decline_explanation
+        );
+
+        $this->db->insert('messages_decline_explanation', $data);
     }
 
     /****************************** GET ALL DEPARTMENTS ******************************/

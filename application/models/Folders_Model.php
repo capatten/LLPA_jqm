@@ -8,6 +8,7 @@ class Folders_model extends CI_Model {
 		// Your own constructor code
 	}
 
+    /************** GET USERS FOLDERS **************/
     public function get_user_folders($param_emp_id){
         $query = $this->db->query("
                 SELECT
@@ -47,6 +48,17 @@ class Folders_model extends CI_Model {
         return $result;
     }
 
+    /************** ADD NEW FOLDERS **************/
+    public function add_new_folder($param_folder_name, $param_emp_id){
+        $data = array(
+            'folder_name' => $param_folder_name
+            ,'emp_id' => $param_emp_id
+        );
+
+        $this->db->insert('folders', $data);
+    }
+
+    /************** DELETE USERS FOLDERS **************/
     public function delete_user_folders($param_folder_id){
         $this->db->where('folder_id', $param_folder_id);
         $this->db->delete('folders');

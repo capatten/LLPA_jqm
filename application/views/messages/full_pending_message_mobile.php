@@ -46,10 +46,10 @@
 <div id="confirm" data-role="popup" data-transition="slidefade" data-dismissible="false">
 	<p id="question">Why was the message Declined</p>
 	<div class="textarea-container">
-		<textarea></textarea>
+		<textarea id="decline_txt"></textarea>
 	</div>
 	<div class="buttons-container">
-		<button>Submit</button>
+		<button id="decline_submit" data-message-id="<?php echo $content['message_id']; ?>">Submit</button>
 		<a href="#" data-rel="back" class="cancel-btn"><button>Cancel</button></a>
 	</div>
 </div><!-- /popup -->

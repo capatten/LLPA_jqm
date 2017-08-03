@@ -148,9 +148,20 @@ class Messages extends CI_Controller {
 		$this->load->view('layout/default_mobile',$data);
 	}
 
+    /************************************************ APPROVE MESSAGE ************************************************/
     public function Approve_Message(){
         $this->load->model('Messages_Model');
         $this->Messages_Model->update_message_status( $param_message_id = $_POST["message_id"], $param_message_status = "1" );
+    }
+
+    /************************************************ DECLINE MESSAGE ************************************************/
+    public function Decline_Message(){
+        $this->load->model('Messages_Model');
+        $this->Messages_Model->update_message_status( $param_message_id = $_POST["message_id"], $param_message_status = "2" );
+        $this->Messages_Model->insert_decline_explanation(
+            $param_message_id = $_POST["message_id"]
+            ,$param_decline_explanation = $_POST["decline_txt"]
+        );
     }
 
 	/**************************************************************** PRIVATE FUNCTIONS ****************************************************************/

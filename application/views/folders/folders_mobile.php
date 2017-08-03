@@ -32,7 +32,7 @@
     <label for="folder-name">Folder Name:</label>
     <input type="text" id="folder-name" name="folder-name" />
     <div class="buttons-container">
-        <button>Submit</button>
+        <button id="addNewSubmit">Submit</button>
         <a href="#" data-rel="back" class="cancel-btn"><button>Cancel</button></a>
     </div>
 </div><!-- /add new popup -->

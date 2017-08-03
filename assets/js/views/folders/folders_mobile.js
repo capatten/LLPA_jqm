@@ -2,9 +2,35 @@
 var $addNew = $(".add-new");
 var $trash = $(".fa-trash-o");
 var $deleteFolderMsg = $("#delete-folder-msg");
+var $addNewSubmit = $("#addNewSubmit");
+var $folderName = $("#folder-name");
 /*************** END GLOBAL VARIABLES ***************/
+
 $addNew.on('click', function(){
 	$("#add-new").popup( "open" );
+	$("#folder-name").focus();
+});
+
+$addNewSubmit.on("click", function(){
+    var fldr_name = $folderName.val();
+    var dataObj = ({folder_name: fldr_name});
+
+    $.mobile.loading( "show", {
+        text: "Creating Folder '"+ fldr_name + "'",
+        textVisible: true,
+        theme: "z",
+        html: ""
+    });
+
+    $.ajax({
+        type: "POST"
+        ,url: "Add_Folder/"
+        ,data: dataObj
+        ,cache: false
+        ,success: function(){
+            window.location.href="./"
+        }
+    });
 });
 
 $trash.on('click', function(){
@@ -34,10 +60,10 @@ $trash.on('click', function(){
         $.ajax({
             type: "POST"
 			,url: "Delete_Folder/"
-            ,data: ({"folder_id": fldr_id})
+            ,data: dataObj
             ,cache: false
             ,success: function(){
-                window.location.href="./Pending_Messages"
+                window.location.href="./"
             }
         });
 	}
