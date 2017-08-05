@@ -17,4 +17,5 @@ application/logs/*
 /vendor/
 
 application/config/*
+application/config/profiler.php
 .idea/*

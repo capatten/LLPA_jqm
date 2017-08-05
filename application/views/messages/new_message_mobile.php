@@ -59,6 +59,10 @@
                 </div>
                 <hr/>
             <?php endforeach; ?>
+            <div class="col-xs-12 departmentBtn-container">
+                <button class="btn-cancel" type="button">Cancel</button>
+                <button class="btn-send" type="button">Done</button>
+            </div>
         </div><!-- /popup -->
     </div>
 </form>

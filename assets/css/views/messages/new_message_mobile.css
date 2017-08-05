@@ -68,6 +68,10 @@ div.new-message-wrapper div.new-message-content div.messageBtn-container button 
     display: inline-block;
 }
 
+div.new-message-wrapper div.new-message-content div.messageBtn-container button.btn-cancel {
+    float: left;
+}
+
 div.new-message-wrapper div.new-message-content div.messageBtn-container button.btn-send {
     float: right;
 }
@@ -119,4 +123,17 @@ div#department_list div.department-container span {
     position: relative;
     top: -1em;
     left: 2.1875em;
+}
+
+div#department_list div.departmentBtn-container button {
+    width: 48%;
+    display: inline-block;
+}
+
+div#department_list div.departmentBtn-container button.btn-cancel {
+    float: left;
+}
+
+div#department_list div.departmentBtn-container button.btn-send {
+    float: right;
 }
