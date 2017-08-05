@@ -60,8 +60,8 @@
                 <hr/>
             <?php endforeach; ?>
             <div class="col-xs-12 departmentBtn-container">
-                <button class="btn-cancel" type="button">Cancel</button>
-                <button class="btn-send" type="button">Done</button>
+                <a href="#" data-rel="back" type="button" class="btn-cancel"><button>Cancel</button></a>
+                <a href="#" data-rel="back" type="button" class="btn-send"><button>Done</button></a>
             </div>
         </div><!-- /popup -->
     </div>

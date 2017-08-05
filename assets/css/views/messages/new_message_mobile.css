@@ -125,15 +125,17 @@ div#department_list div.department-container span {
     left: 2.1875em;
 }
 
-div#department_list div.departmentBtn-container button {
+div#department_list div.departmentBtn-container a button{
     width: 48%;
     display: inline-block;
 }
 
-div#department_list div.departmentBtn-container button.btn-cancel {
+div#department_list div.departmentBtn-container a.btn-cancel button {
     float: left;
+    margin-left: 0.0625em
 }
 
-div#department_list div.departmentBtn-container button.btn-send {
+div#department_list div.departmentBtn-container a.btn-send button {
     float: right;
+    margin-right: 0.0625em
 }
