@@ -77,6 +77,19 @@ div.new-message-wrapper div.new-message-content div.messageBtn-container button.
 }
 
 /******************** JQM POPUP ********************/
+div#department_list {
+    overflow: auto;
+}
+
+div#department_list div.department-list-items {
+    overflow: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 2.50em;
+    bottom: 3.75em;
+}
+
 div#department_list div.department_list_header {
     text-align: center;
 }
@@ -125,6 +138,13 @@ div#department_list div.department-container span {
     left: 2.1875em;
 }
 
+div#department_list div.departmentBtn-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 div#department_list div.departmentBtn-container a button{
     width: 48%;
     display: inline-block;
@@ -132,10 +152,10 @@ div#department_list div.departmentBtn-container a button{
 
 div#department_list div.departmentBtn-container a.btn-cancel button {
     float: left;
-    margin-left: 0.0625em
+    margin-left: 0.125em;
 }
 
 div#department_list div.departmentBtn-container a.btn-send button {
     float: right;
-    margin-right: 0.0625em
+    margin-right: 0.125em;
 }

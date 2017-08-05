@@ -48,17 +48,19 @@
                 <h2>Select Departments</h2>
             </div>
             <hr/>
-            <?php
-                $recordDate = "";
-                foreach ($departments['departments'] as $department):
-            ?>
-                <div class="department-container" data-department-id="<?php echo $department['department_id']; ?>">
-                    <img class="department-image" src="<?php echo base_url('assets/images/departments/'). $department['img_path'] ; ?>">
-                    <span class="department-desc"><?php echo $department['department_desc']; ?></span>
-                    <input class="department-chckbx" type="checkbox" data-department-id="<?php echo $department['department_id']; ?>" data-department-desc="<?php echo $department['department_desc']; ?>" />
-                </div>
-                <hr/>
-            <?php endforeach; ?>
+            <div class="department-list-items">
+                <?php
+                    $recordDate = "";
+                    foreach ($departments['departments'] as $department):
+                ?>
+                    <div class="department-container" data-department-id="<?php echo $department['department_id']; ?>">
+                        <img class="department-image" src="<?php echo base_url('assets/images/departments/'). $department['img_path'] ; ?>">
+                        <span class="department-desc"><?php echo $department['department_desc']; ?></span>
+                        <input class="department-chckbx" type="checkbox" data-department-id="<?php echo $department['department_id']; ?>" data-department-desc="<?php echo $department['department_desc']; ?>" />
+                    </div>
+                    <hr/>
+                <?php endforeach; ?>
+            </div>
             <div class="col-xs-12 departmentBtn-container">
                 <a href="#" data-rel="back" type="button" class="btn-cancel"><button>Cancel</button></a>
                 <a href="#" data-rel="back" type="button" class="btn-send"><button>Done</button></a>
