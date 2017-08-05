@@ -148,6 +148,23 @@ class Messages extends CI_Controller {
 		$this->load->view('layout/default_mobile',$data);
 	}
 
+    /************************************************ INSERT NEW MESSAGE ************************************************/
+    public function Insert_New_Message(){
+        $this->load->model('Messages_Model');
+        //var_dump($_POST);
+        $data = array(
+            'emp_id' => $_SESSION["emp_id"]
+            ,'created_on' => date("Y-m-d H:i:s")
+            ,'message' => $_POST["new_message"]
+            ,'attachment' => 0
+            ,'departments' => $_POST["selected_departments"]
+            ,'folder' => 1
+            ,'message_status' => 0
+        );
+        $this->db->insert('messages', $data);
+    }
+
+
     /************************************************ APPROVE MESSAGE ************************************************/
     public function Approve_Message(){
         $this->load->model('Messages_Model');

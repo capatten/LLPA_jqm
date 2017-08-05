@@ -32,7 +32,7 @@ class Messages_model extends CI_Model {
 					messages AS m
 				WHERE
 					1 = 1
-					AND m.departments = $param_department
+					AND m.departments LIKE '%$param_department%'
 					AND message_status = $param_message_status
 			) AS m
 
@@ -135,7 +135,7 @@ class Messages_model extends CI_Model {
 						messages AS m
 					WHERE
 						1 = 1
-						AND m.departments = $param_department
+						AND m.departments LIKE '%$param_department%'
 						AND message_status = $param_message_status
 				) AS m
 

@@ -63,6 +63,15 @@ div.new-message-wrapper div.new-message-content div.bottom-row div.send-to-btn b
     padding: 0.3125em;
 }
 
+div.new-message-wrapper div.new-message-content div.messageBtn-container button {
+    width: 48%;
+    display: inline-block;
+}
+
+div.new-message-wrapper div.new-message-content div.messageBtn-container button.btn-send {
+    float: right;
+}
+
 /******************** JQM POPUP ********************/
 div#department_list div.department_list_header {
     text-align: center;

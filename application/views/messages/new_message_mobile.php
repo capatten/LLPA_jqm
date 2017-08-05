@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" href="<?php echo base_url('assets/css/views/messages/new_message_mobile.css'); ?>" />
 
-<form action="" method="POST">
+<form action="Insert_New_Message/" method="POST">
     <div class="new-message-wrapper">
         <div class="new-message-content">
             <div>
@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="text-area-container">
-                    <textarea class="createNewMessage_txtarea" placeholder="Enter Message Here"></textarea>
+                    <textarea name="new_message" class="createNewMessage_txtarea" placeholder="Enter Message Here"></textarea>
                 </div>
 
                 <div class="bottom-row">
@@ -23,7 +23,7 @@
                             <i><strong>To: </strong><?php echo $_SESSION["department_desc"]; ?></i>
                         </div>
                         <div class="send-to-btn">
-                            <button id="add_department_btn"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                            <button type="button" id="add_department_btn"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
                         </div>
                     </div>
 
@@ -36,11 +36,13 @@
                 </div>
             </div>
             <div class="col-xs-12 messageBtn-container">
-                <button class="btn btn-default pull-left" type="button">Cancel</button>
-                <button class="btn btn-default pull-right" type="button">Send</button>
-                <input type="hidden" id="selected_departments" name="selected_departments">
+                <button class="btn-cancel" type="button">Cancel</button>
+                <button class="btn-send" type="submit">Send</button>
+                <input type="hidden" id="selected_departments" name="selected_departments" value="<?php echo $_SESSION["department_id"]; ?>">
             </div>
         </div>
+
+        <!---------------------------------- DEPARTMENT LIST ------------------------------>
         <div id="department_list" data-role="popup" data-transition="slidefade" data-dismissible="true">
             <div class="department_list_header">
                 <h2>Select Departments</h2>

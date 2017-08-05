@@ -3,6 +3,7 @@ var $addDepartmentBtn = $("#add_department_btn");
 var $sendToText = $(".send-to-text");
 var $departmentChckbx = $(".department-chckbx");
 var $selectedDepartments = $("#selected_departments");
+var $submitNewMessage = $("#submit-new-message");
 
 /*************** END GLOBAL VARIABLES ***************/
 $addDepartmentBtn.on('click', function(){
@@ -11,6 +12,10 @@ $addDepartmentBtn.on('click', function(){
 
 $departmentChckbx.on('click', function(){
     createDepartmentTextString();
+});
+
+$submitNewMessage.on('click', function(){
+
 });
 
 /************************** PRIVATE FUNCTIONS *************************/
@@ -24,6 +29,7 @@ var createDepartmentTextString = function(){
             departmentsString = departmentsString + $(this).data('department-id') + ','
         }
 	});
+
     $sendToText.html('<i><strong>To: </strong>' + textString.slice(0,-1) + '</i>');
     $selectedDepartments.val(departmentsString.slice(0,-1));
 };
