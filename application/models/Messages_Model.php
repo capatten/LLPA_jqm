@@ -9,7 +9,7 @@ class Messages_model extends CI_Model {
 	}
 
 	/****************************** GET DASHBOARD MESSAGES ******************************/
-	public function get_dashboard_messages($param_department, $param_message_status){
+	public function get_dashboard_messages($param_department, $param_message_status, $param_emp_id){
 		$query = $this->db->query("
 			SELECT
 				m.message_id
@@ -33,7 +33,16 @@ class Messages_model extends CI_Model {
 				WHERE
 					1 = 1
 					AND m.departments LIKE '%$param_department%'
-					AND message_status = $param_message_status
+					AND m.message_status = $param_message_status
+					AND m.message_id NOT IN (
+                        SELECT
+                            fm.message_id
+                        FROM
+                            folder_messages AS fm
+                        WHERE
+                            1 = 1
+                            AND fm.emp_id = $param_emp_id
+                    )
 			) AS m
 
 			LEFT JOIN (

@@ -4,7 +4,16 @@ var $trash = $(".fa-trash-o");
 var $deleteFolderMsg = $("#delete-folder-msg");
 var $addNewSubmit = $("#addNewSubmit");
 var $folderName = $("#folder-name");
+var $getSelectedFolderFrm = $("#get-selected-folder-frm");
+var $folderLink = $(".folder-link");
+var $selectedFolder = $("#selected-folder");
 /*************** END GLOBAL VARIABLES ***************/
+
+$folderLink.on('click', function(){
+    var folderID = $(this).data("fldr-id");
+    $selectedFolder.val(folderID);
+    $getSelectedFolderFrm.submit();
+});
 
 $addNew.on('click', function(){
 	$("#add-new").popup( "open" );

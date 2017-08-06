@@ -44,6 +44,39 @@ class Folders extends CI_Controller {
 	}
 
     /************************************************ ADD FOLDER ************************************************/
+    public function Get_Folder_Messages(){
+        $data = [];
+
+        /************************ MENU ************************/
+        $menu['activePage'] = "Folders";
+
+        $data['menu'] = $menu;
+        $data['menuPage'] ='menus/menu';
+
+        /************************ CONTENT ************************/
+        if(isset($_POST['selected-folder'])) {
+            $this->session->set_userdata('selected_folder', $_POST["selected-folder"]);
+        }
+
+        $this->load->model('Folders_Model');
+        $messages['userMessages']= $this->Folders_Model->get_folder_messages(
+            $param_folder_id = $_SESSION["selected_folder"]
+            ,$param_emp_id = $_SESSION["emp_id"]
+        );
+
+        $data['content'] = $messages;
+        $data['contentPage'] ='messages/messages_mobile';
+
+        /************************ NAVIGATION ************************/
+        $this->load->model('Messages_Model');
+        $data['pending_message_count']= $this->Messages_Model->get_pending_message_count( $param_department = $_SESSION["department_id"], $param_message_status = 0 );
+        $data['navigation'] = 'navigation/navigation_mobile';
+
+        /***************************** LOAD PAGE *****************************/
+        $this->load->view('layout/default_mobile',$data);
+    }
+
+    /************************************************ ADD FOLDER ************************************************/
     public function Add_Folder(){
         $this->load->model('Folders_Model');
         $this->Folders_Model->add_new_folder(
