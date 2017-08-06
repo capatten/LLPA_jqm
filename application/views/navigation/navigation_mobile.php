@@ -60,7 +60,7 @@
 		<div class="navigation-item">
             <a href="<?php echo base_url("Profile/"); ?>"><img alt="Profile" class="nav-icon" src="
                 <?php
-                if($menu['activePage'] != "Folders"){
+                if($menu['activePage'] != "Profile"){
                     echo base_url("assets/images/icons/Nav_Profile.png");
                 }else{
                     echo base_url("assets/images/icons/Profile_orange.png");
