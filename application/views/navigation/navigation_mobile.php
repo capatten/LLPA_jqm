@@ -58,7 +58,15 @@
             "/></a>
 		</div>
 		<div class="navigation-item">
-			<a href="<?php echo base_url("Profile/"); ?>"><img alt="Profile" class="nav-icon" src="<?php echo base_url("assets/images/icons/Nav_Profile.png"); ?>"/></a>
+            <a href="<?php echo base_url("Profile/"); ?>"><img alt="Profile" class="nav-icon" src="
+                <?php
+                if($menu['activePage'] != "Folders"){
+                    echo base_url("assets/images/icons/Nav_Profile.png");
+                }else{
+                    echo base_url("assets/images/icons/Profile_orange.png");
+                }
+                ?>
+            "/></a>
 		</div>
 	</div>
 </div>
