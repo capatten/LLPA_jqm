@@ -49,6 +49,18 @@
 			<input id="selected_messageID" name="selected_messageID" type="hidden">
 		</form>
 	</div>
+
+    <?php if($_SESSION["title_id"] == 1){ ?>
+        <div id="move-to" data-role="popup" data-transition="slidefade" data-dismissible="true">
+            <p id="move-to-label">Move to</p>
+            <div class="buttons-container">
+                <?php foreach ($folders['userFolders'] as $userFolder): ?>
+                    <button class="move-to-folder" data-folder-id="<?php echo $userFolder['folder_id']; ?>"><?php echo $userFolder['folder_name']; ?></button>
+                <?php endforeach; ?>
+            </div>
+            <input id="selected-message" type="hidden">
+        </div><!-- /popup -->
+    <?php } ?>
 </div>
 
 <script type="text/javascript" src="<?php echo base_url("assets/js/views/messages/messages_mobile.js"); ?>"></script>

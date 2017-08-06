@@ -67,6 +67,11 @@ class Folders extends CI_Controller {
         $data['content'] = $messages;
         $data['contentPage'] ='messages/messages_mobile';
 
+        $this->load->model('Folders_Model');
+        $folders['userFolders']= $this->Folders_Model->get_user_folders( $param_emp_id = $_SESSION["emp_id"] );
+
+        $data['folders'] = $folders;
+
         /************************ NAVIGATION ************************/
         $this->load->model('Messages_Model');
         $data['pending_message_count']= $this->Messages_Model->get_pending_message_count( $param_department = $_SESSION["department_id"], $param_message_status = 0 );
@@ -89,6 +94,16 @@ class Folders extends CI_Controller {
     public function Delete_Folder(){
         $this->load->model('Folders_Model');
         $this->Folders_Model->delete_user_folders( $param_folder_id = $_POST["folder_id"] );
+    }
+
+    /************************************************ MOVE TO FOLDER ************************************************/
+    public function Move_To_Folder(){
+        $this->load->model('Folders_Model');
+        $this->Folders_Model->move_to_folder(
+            $param_folder_id = $_POST["folder_id"]
+            ,$param_msg_id = $_POST["msg_id"]
+            ,$param_emp_id = $_SESSION["emp_id"]
+        );
     }
 
 	/**************************************************************** PRIVATE FUNCTIONS ****************************************************************/

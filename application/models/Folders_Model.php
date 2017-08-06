@@ -115,4 +115,15 @@ class Folders_model extends CI_Model {
 		$result = $query->result_array();
 		return $result;
     }
+
+    /************** MOVE TO FOLDER **************/
+    public function move_to_folder($param_folder_id, $param_msg_id, $param_emp_id){
+        $data = array(
+            'emp_id' => $param_emp_id,
+            'folder_id' => $param_folder_id,
+            'message_id' => $param_msg_id
+        );
+
+        $this->db->insert('folder_messages', $data);
+    }
 }

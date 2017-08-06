@@ -34,8 +34,13 @@ class Messages extends CI_Controller {
             ,$param_emp_id = $_SESSION["emp_id"]
         );
 
-		$data['content'] = $messages;
-		$data['contentPage'] ='messages/messages_mobile';
+        $data['content'] = $messages;
+        $data['contentPage'] ='messages/messages_mobile';
+
+        $this->load->model('Folders_Model');
+        $folders['userFolders']= $this->Folders_Model->get_user_folders( $param_emp_id = $_SESSION["emp_id"] );
+
+        $data['folders'] = $folders;
 
 		/************************ NAVIGATION ************************/
 		$data['pending_message_count']= $this->Messages_Model->get_pending_message_count( $param_department = $_SESSION["department_id"], $param_message_status = 0 );
