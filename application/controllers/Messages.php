@@ -91,7 +91,11 @@ class Messages extends CI_Controller {
 
 		/************************ CONTENT ************************/
 		$this->load->model('Messages_Model');
-		$messages['userMessages']= $this->Messages_Model->get_dashboard_messages( $param_emp_id = $_SESSION["department_id"], $param_message_status = 0 );
+		$messages['userMessages']= $this->Messages_Model->get_dashboard_messages(
+		    $param_emp_id = $_SESSION["department_id"]
+            ,$param_message_status = 0
+            ,$param_emp_id = $_SESSION["emp_id"]
+        );
 
 		$data['content'] = $messages;
 		$data['contentPage'] ='messages/pending_messages_mobile';
