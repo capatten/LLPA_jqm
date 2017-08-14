@@ -11,10 +11,8 @@ class Folders extends CI_Controller {
            	$this->load->library('user_agent');
 			$this->load->helper('url');
 
-			/************************ NAVIGATION ************************/
-			if($this->session->userdata("logged_in") == null){
-			    $this->_getUserSessionVariables($userEmailAddress ='pattenchada@gmail.com');
-			}
+            /************************ LOAD SESSION DATA ************************/
+            $this->_getUserSessionVariables($userEmailAddress ='pattenchada@gmail.com');
     }
 
 	/************************************************ INDEX ************************************************/

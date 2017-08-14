@@ -13,9 +13,8 @@ class Mobile extends CI_Controller {
 			/************************ HEAD ************************/
 			$this->load->view('mobile/template/head');
 
-			if($this->session->userdata("logged_in") == null){
-			    $this->_getUserSessionVariables($userEmailAddress ='pattenchada@gmail.com');
-			}
+            /************************ LOAD SESSION DATA ************************/
+            $this->_getUserSessionVariables($userEmailAddress ='pattenchada@gmail.com');
 
 			/************************ NAVIGATION ************************/
 			$this->load->view('mobile/template/navigation');
